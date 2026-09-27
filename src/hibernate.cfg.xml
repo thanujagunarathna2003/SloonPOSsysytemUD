@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/eranda_saloon_db?useSSL=false&amp;allowPublicKeyRetrieval=true</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">thanuja123</property>
+
+        <!-- Enable automatic schema update -->
+        <!--<property name="hibernate.hbm2ddl.auto">update</property>-->
+
+        <!-- Show generated SQL -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Mapping file -->
+        
+        <mapping class="entity.Gender"/>
+        <mapping class="entity.AgeStatus"/>
+        <mapping class="entity.Customer"/>
+        <mapping class="entity.WorkingStatus"/>
+        <mapping class="entity.BookingStatus"/>
+        <mapping class="entity.Booking"/>
+        <mapping class="entity.Massage"/>
+        <mapping class="entity.CustomerWantCategory"/>
+        <mapping class="entity.Invoice"/>
+        <mapping class="entity.InvoiceItem"/>
+        <mapping class="entity.Employee"/>
+
+    </session-factory>
+</hibernate-configuration>
